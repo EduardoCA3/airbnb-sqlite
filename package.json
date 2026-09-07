@@ -1,0 +1,16 @@
+{
+  "name": "airbnb-sqlite-migraciones",
+  "version": "1.0.0",
+  "description": "Proyecto SQLite con migraciones dbmate y carga desde listings.csv",
+  "main": "index.js",
+  "scripts": {
+    "dbmate:new": "npx dbmate -d db/migrations -e DB new",
+    "dbmate:up": "npx dbmate -d db/migrations -e DB up",
+    "dbmate:rollback": "npx dbmate -d db/migrations -e DB rollback",
+    "dbmate:dump": "npx dbmate -d db/migrations -e DB dump",
+    "load": "python cargar_datos.py"
+  },
+  "dependencies": {
+    "dbmate": "^2.33.0"
+  }
+}
